@@ -105,7 +105,8 @@ fieldset{
   padding: 1rem 2rem;
   margin: 1.5rem 0;
   border: none;
-  box-shadow: 0 2px 5px rgba(128, 128, 128, 0.699);
+  box-shadow: 0 0px 10px rgba(128, 128, 128, 0.363);
+  clip-path: inset(0px 0px -10px 0);
 }
 
 .inputs-wrapper{
