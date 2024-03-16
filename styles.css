@@ -1,24 +1,64 @@
 html{
   padding: 0;
   margin: 0;
+  height: 100%;
+  border: 0;
 }
 
+@font-face {
+  font-family: 'Viking';
+  src: url(/fonts/Norse-Bold.otf);
+}
 body{
   font-family: sans-serif;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-
+  height: 100vh;
 }
 
 section.logo-section{
-  max-width: 500px;
+  width: clamp(300px, 40vw, 500px);
+  margin:0;
+  height: 100vh;
+  background-image: url('/img/halie-west-25xggax4bSA-unsplash.jpg');
+  background-size: cover;
+  position: relative;
+
 }
 
+div.logo-section{
+  margin:0;
+  top: 30%;
+  background-color: rgba(0, 0, 0, 0.295);
+  position:relative;
+  padding: 1rem 5rem;
+  font-family: 'Viking';
+  font-size: 6rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 img{
-  height: 100vh;
-  max-width: fit-content;
+  height: 9rem;
+  position: relative;
+}
+
+p.credit,
+p.credit a,
+p.credit a:visited{
+  color: white;
+}
+
+p.credit{
+  position: absolute;
+  bottom: 0%;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 button,
@@ -38,7 +78,8 @@ p{
 
 section.form{
   background-color: rgb(247, 247, 247);
-  width: 1000px
+  width: clamp(500px, 60vw, 800px);
+  height: 100vh;
 }
 
 div.section-wrapper{
@@ -120,7 +161,7 @@ input:focus {
   border-color: rgb(187, 1, 1);
 }
 
-label[for=pwd]::after{
+label.error::after{
   letter-spacing: 0;
   content:'* Passwords do not match';
   position: absolute;
@@ -140,7 +181,12 @@ button{
   font-weight: bold;
   font-size: .9rem;
   color: white;
-  box-shadow: 2px 2px 6px #68686833 ;
+  box-shadow: 2px 2px 6px #68686833;
+  cursor: pointer;
+}
+
+button[disabled]{
+  background-color:#686867;
 }
 
 p.log-in{
